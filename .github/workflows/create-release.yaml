@@ -1,0 +1,7 @@
+  on:
+    pull_request:
+  jobs:
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: ordinaryphp/cicd-semver-release@main
