@@ -4,4 +4,5 @@
     job1:
       runs-on: ubuntu-latest
       steps:
+        - uses: action/checkout@main
         - uses: ordinaryphp/cicd-semver-release@main
