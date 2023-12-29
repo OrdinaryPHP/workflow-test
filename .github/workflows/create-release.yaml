@@ -1,5 +1,14 @@
   on:
     pull_request:
+      branches:
+        - main
+      types:
+        - labeled
+        - unlabeled
+        - opened
+        - closed
+        - reopened
+        - synchronize
   jobs:
     job1:
       runs-on: ubuntu-latest
