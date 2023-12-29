@@ -1,17 +1,19 @@
-  on:
-    pull_request:
-      branches:
-        - main
-      types:
-        - labeled
-        - unlabeled
-        - opened
-        - closed
-        - reopened
-        - synchronize
-  jobs:
-    job1:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@main
-        - uses: ordinaryphp/cicd-semver-release@main
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - labeled
+      - unlabeled
+      - opened
+      - closed
+      - reopened
+      - synchronize
+permissions:
+  contents: write
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: ordinaryphp/cicd-semver-release@main
